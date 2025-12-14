@@ -31,9 +31,12 @@ Directly relevant to healthcare quality and policy decisions
 Target Variable
 We predict hospital readmission within 30 days:
 Original Value	Encoded
-NO	0
-<30	1
->30	0
+| Original Value | Encoded |
+| -------------- | ------- |
+| NO             | 0       |
+| <30            | 1       |
+| >30            | 0       |
+
 
 This binary target allows standard ML models for classification.
 
@@ -61,3 +64,52 @@ Identify patient groups with higher readmission probability
 Inform interventions and resource allocation
 
 Examine fairness across age, gender, and race
+
+Phase 1: Project Definition & Dataset Understanding
+
+Notebook: 00_data_understanding.ipynb
+
+Sections:
+
+Load Data: pandas, load CSV, inspect shape
+
+Basic Data Inspection: .head(), .info(), .describe(), list categorical vs numeric
+
+Missing Values: count missing, inspect columns requiring preprocessing
+
+Explore Target: proportions of readmitted = yes/no, class imbalance, plots
+
+Simple Visualizations: readmission rate by age, race, gender, time in hospital
+
+Phase 2–5: Machine Learning Workflow
+Phase 2: Preprocessing
+
+Encode categorical variables
+
+Scale numeric variables
+
+Split data into train/test sets
+
+Phase 3: Baseline Models
+
+Logistic Regression
+
+Random Forest
+
+Gradient Boosting
+
+Evaluate with accuracy, ROC-AUC, and classification report
+
+Phase 4: Advanced Models
+
+L1-regularized Logistic Regression
+
+Tuned Random Forest
+
+Optionally: XGBoost, LightGBM, CatBoost (if installed)
+
+Phase 5: Neural Networks
+
+Multi-Layer Perceptron (MLP) for classification
+
+Track training loss and evaluate metrics
